@@ -1,0 +1,75 @@
+[
+  {
+    "section": "contact",
+    "platform": "gmail",
+    "address": "dowol1212@gmail.com",
+    "title": "Email"
+  },
+
+  {
+    "section": "contact",
+    "platform": "kakaotalk",
+    "href": "https://open.kakao.com/me/dowol1212",
+    "title": "KakaoTalk Open Chat",
+    "dark": true
+  },
+  {
+    "section": "contact",
+    "platform": "twitter",
+    "href": "https://twitter.com/dowol1212",
+    "username": "dowol1212",
+    "description": "#Sing #Study #Develop #Life"
+  },
+  {
+    "section": "contact",
+    "platform": "discord",
+    "username": "dowol",
+    "href": "https://discord.com/users/797367208347041812"
+  },
+  {
+    "section": "contact",
+    "platform": "instagram",
+    "username": "dowol.lee",
+    "href": "https://instagram.com/dowol.lee",
+    "description": "Album of my life"
+  },
+  {
+    "section": "develop",
+    "platform": "stackoverflow",
+    "title": "Stack Overflow",
+    "href": "https://stackoverflow.com/users/16315363/dowol",
+    "username": "dowol"
+  },
+  {
+    "section": "develop",
+    "platform": "github",
+    "href": "https://github.com/dowol",
+    "username": "dowol",
+    "description": "",
+    "title": "GitHub"
+  },
+  {
+    "section": "develop",
+    "platform": "gitlab",
+    "href": "https://gitlab.com/dowol",
+    "username": "dowol",
+    "order": 2,
+    "description": "Mirror repositories from my GitHub",
+    "title": "GitLab"
+  },
+  {
+    "section": "creator",
+    "platform": "youtube",
+    "href": "https://youtube.com/@dowolmusic",
+    "username": "dowolmusic",
+    "title": "Dowol Music",
+    "description": "Vocal & Guitar Cover"
+  },
+  {
+    "section": "creator",
+    "platform": "twitch",
+    "href": "https://twitch.tv/dowol_",
+    "username": "dowol_",
+    "description": "#JustChatting #Music #Radio #IRL"
+  }
+]

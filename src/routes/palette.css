@@ -1,0 +1,27 @@
+/* Colors */
+:root {
+    --color-bg-0: rgb(202, 216, 228);
+    --color-bg-1: hsl(209, 36%, 86%);
+    --color-bg-2: hsl(224, 44%, 95%);
+    --color-theme-1: #ff3e00;
+    --color-theme-2: #4075a6;
+    --color-text: rgba(0, 0, 0, 0.7);
+
+    --brown: #8f642d;
+    --brown-50: #f9f7ed;
+    --brown-100: #f0ead1;
+    --brown-200: #e3d5a5;
+    --brown-300: #d3b971;
+    --brown-400: #c69f49;
+    --brown-500: #b68a3c;
+    --brown-600: #8f642d;
+    --brown-700: #7e522a;
+    --brown-800: #6a4329;
+    --brown-900: #5b3a28;
+    --brown-950: #341e14;
+}
+
+/* Font families */
+:root {
+
+}

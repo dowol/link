@@ -68,6 +68,7 @@
 
 <style lang="scss">
   .link-item {
+    --theme-color: white;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -88,7 +89,7 @@
     }
 
     * {
-      color: white;
+      color: var(--theme-color);
     }
 
     > .link-msg {
@@ -118,6 +119,11 @@
   }
 
   .link-item.dark * {
-    color: black;
+    --theme-color: black;
+  }
+
+  .link-item:hover,
+  .link-item:focus {
+
   }
 </style>

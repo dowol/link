@@ -38,21 +38,12 @@
     background-color: #8f642d;
 
     .profile {
-      padding: .5rem 1rem;
+      padding: .5rem 0;
+      margin: 0 auto;
+      width: 100%;
 
-      @media(min-width: 480px) {
-        padding: .5rem 2rem;
-      }
-
-      @media(min-width: 720px) {
-        padding: .5rem 3rem;
-      }
-
-      @media(min-width: 960px) {
-        padding: .5rem 4rem;
-      }
-      @media(min-width: 1280px) {
-        padding: .5rem 5rem;
+      @media(min-width: 400px) {
+        max-width: 400px;
       }
 
       display: flex;
@@ -66,6 +57,7 @@
       font-family: var(--font-title);
       font-size: 1.875rem;
       color: white;
+      margin: 0;
     }
 
   }

@@ -12,33 +12,24 @@
 
     function getIcon(): string {
         try {
-            return 'https://cdn.simpleicons.org/' + icon + (dark ? '/black' : '/white');
+            return 'https://cdn.simpleicons.org/' + icon + '/white';
         } catch (e) {
             console.error(e);
             return '';
         }
-
     }
 
     function linkColor(): string {
         try {
             return '#' + simpleIcons.find(item => item.title.replaceAll(/\s/g, '').toLowerCase() == icon.toLowerCase()).hex;
-
         } catch (e) {
             console.error(e);
             return '#444';
         }
-
     }
 
     function capitalize(str: string): string {
         return str[0].toUpperCase() + str.slice(1);
-    }
-
-    function copyLink(): void {
-        navigator.clipboard.writeText(href.toString())
-            .then(() => alert(`URL for ${platform} copied on your clipboard.\n(${href})`))
-            .catch(() => alert(`FAILED TO COPY URL for ${platform} on your clipboard.`));
     }
 
     function className(): string {
@@ -67,17 +58,21 @@
 
 
 <style lang="scss">
+
   .link-item {
+    $link-color: var(--link-color);
+
     --theme-color: white;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
     margin: .5rem;
-    padding: .375rem .75rem;
+    padding: calc(.375rem - 1px) calc(.75rem - 1px);
+    border: 1px solid var(--link-color);
     border-radius: .375rem;
     min-height: 3.5rem;
-    background-color: var(--link-color);
+    background-color: color-mix(in srgb, var(--link-color) 20%, transparent);
 
     text-decoration: none;
 
@@ -86,10 +81,12 @@
       padding: .5rem;
       width: $icon-size;
       height: $icon-size;
+      background-color: var(--link-color);
+      border-radius: .75rem;
     }
 
     * {
-      color: var(--theme-color);
+      color: color-mix(in srgb, var(--link-color) 62.5%, black);
     }
 
     > .link-msg {
@@ -114,7 +111,13 @@
       .link-msg-description {
         margin: 0;
       }
+    }
+  }
 
+  .link-item:hover {
+    background-color: var(--link-color);
+    * {
+      color: var(--theme-color);
     }
   }
 
@@ -122,8 +125,11 @@
     --theme-color: black;
   }
 
-  .link-item:hover,
-  .link-item:focus {
+  .link-item:first-child {
+    margin-top: 0;
+  }
 
+  .link-item:last-child{
+    margin-bottom: 0;
   }
 </style>

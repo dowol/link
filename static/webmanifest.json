@@ -1,0 +1,16 @@
+{
+  "short_name": "link.dowol.net",
+  "name": "Dowol's links",
+  "description": "",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "dowol-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#8f642d"
+}

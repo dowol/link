@@ -13,8 +13,7 @@
     function getIcon(): string {
         try {
             return 'https://cdn.simpleicons.org/' + icon + (dark ? '/black' : '/white');
-        }
-        catch(e){
+        } catch (e) {
             console.error(e);
             return '';
         }
@@ -25,8 +24,7 @@
         try {
             return '#' + simpleIcons.find(item => item.title.replaceAll(/\s/g, '').toLowerCase() == icon.toLowerCase()).hex;
 
-        }
-        catch(e) {
+        } catch (e) {
             console.error(e);
             return '#444';
         }
@@ -48,27 +46,25 @@
     }
 </script>
 
-<div class={className()} style="--link-color: {linkColor()}">
-    <a href={href ?? ''} target={href ? "_blank" : "_self"}>
-        <img class="link-icon" src={getIcon()} alt={platform}/>
-        <div class="link-msg">
-            <div class="link-msg-platform">
-                <span class="link-title">{title}</span>
-                {#if username}
-                    <span class="link-username">@{username}</span>
-                {:else if address}
-                    <span class="link-address">{address}</span>
-                {/if}
-            </div>
-            {#if description}
-                <p class="link-msg-description">
-                    {description}
-                </p>
+<a class={className()} style="--link-color: {linkColor()}" href={href ?? ''} target={href ? "_blank" : "_self"}>
+    <img class="link-icon" src={getIcon()} alt={platform}/>
+    <div class="link-msg">
+        <div class="link-msg-platform">
+            <span class="link-title">{title}</span>
+            {#if username}
+                <span class="link-username">@{username}</span>
+            {:else if address}
+                <span class="link-address">{address}</span>
             {/if}
         </div>
-    </a>
+        {#if description}
+            <p class="link-msg-description">
+                {description}
+            </p>
+        {/if}
+    </div>
+</a>
 
-</div>
 
 <style lang="scss">
   .link-item {
@@ -82,54 +78,46 @@
     min-height: 3.5rem;
     background-color: var(--link-color);
 
-    > a {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
-      flex-grow: 1;
-      text-decoration: none;
+    text-decoration: none;
 
-      > .link-icon {
-        $icon-size: 2rem;
-        padding: .5rem;
-        width: $icon-size;
-        height: $icon-size;
-      }
-
-      * {
-        color: white;
-      }
-
-      > .link-msg {
-        flex-grow: 1;
-        text-align: center;
-        margin: 0 .375rem;
-
-        .link-title {
-          font-size: 1.2rem;
-          font-family: var(--font-title);
-        }
-
-        .link-username, .link-msg-description, .link-address {
-          font-size: .8rem;
-        }
-
-        .link-username, .link-address {
-          font-family: var(--font-mono);
-          padding: 0 .25rem;
-        }
-
-        .link-msg-description {
-          margin: 0;
-        }
-
-      }
+    > .link-icon {
+      $icon-size: 2rem;
+      padding: .5rem;
+      width: $icon-size;
+      height: $icon-size;
     }
 
+    * {
+      color: white;
+    }
+
+    > .link-msg {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0 .375rem;
+
+      .link-title {
+        font-size: 1.2rem;
+        font-family: var(--font-title);
+      }
+
+      .link-username, .link-msg-description, .link-address {
+        font-size: .8rem;
+      }
+
+      .link-username, .link-address {
+        font-family: var(--font-mono);
+        padding: 0 .25rem;
+      }
+
+      .link-msg-description {
+        margin: 0;
+      }
+
+    }
   }
 
-  .link-item.dark > a * {
+  .link-item.dark * {
     color: black;
   }
 </style>
